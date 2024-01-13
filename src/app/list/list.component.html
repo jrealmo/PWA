@@ -1,0 +1,51 @@
+<mat-progress-spinner *ngIf="loading" mode="indeterminate"></mat-progress-spinner>
+
+<div *ngIf="!loading && gundamSeries.length > 0" class="container mt-4 mb-2">
+  <div class="d-flex justify-content-end mb-2">
+    <button class="btn btn-light btn-shadow mr-2" (click)="toggleDisplayMode('cards')">
+      <mat-icon class="mr-1">view_module</mat-icon>
+    </button>
+    <button class="btn btn-light btn-shadow" (click)="toggleDisplayMode('table')">
+      <mat-icon class="mr-1">view_list</mat-icon>
+    </button>
+  </div>
+
+  <ng-container *ngIf="displayMode === 'cards'; else table">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+      <div *ngFor="let series of gundamSeries" class="col mb-2">
+        <app-card
+          [series]="series"
+          (navigateToDetailClick)="selectSeries(series)"
+          class="link"
+        ></app-card>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #table>
+    <div *ngFor="let series of gundamSeries">
+      <app-grid
+        [series]="series"
+        (navigateToDetailClick)="selectSeries(series)"
+        class="link animate__animated animate__fadeIn"
+      ></app-grid>
+    </div>
+  </ng-template>
+</div>
+
+<div *ngIf="!loading && gundamSeries.length === 0">
+  No se encontraron datos.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
