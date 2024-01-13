@@ -1,0 +1,102 @@
+{
+  "configVersion": 1,
+  "timestamp": 1705178990936,
+  "index": "/PWA/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/PWA/favicon.ico",
+        "/PWA/index.html",
+        "/PWA/main.bf83c0913ce4d8fb.js",
+        "/PWA/manifest.webmanifest",
+        "/PWA/polyfills.95a7b794877f82ac.js",
+        "/PWA/runtime.f1992883663f4ac7.js",
+        "/PWA/styles.7f4d6643c89fa703.css"
+      ],
+      "patterns": [
+        "https:\\/\\/cdn\\.jsdelivr\\.net\\/npm\\/bootstrap@5\\.0\\.0-beta1\\/dist\\/css\\/bootstrap\\.min\\.css",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/PWA/assets/css/animate.css",
+        "/PWA/assets/icons/icon-128x128.png",
+        "/PWA/assets/icons/icon-144x144.png",
+        "/PWA/assets/icons/icon-152x152.png",
+        "/PWA/assets/icons/icon-192x192.png",
+        "/PWA/assets/icons/icon-384x384.png",
+        "/PWA/assets/icons/icon-512x512.png",
+        "/PWA/assets/icons/icon-72x72.png",
+        "/PWA/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-jikan",
+      "patterns": [
+        "https:\\/\\/api\\.jikan\\.moe\\/v4\\/anime"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 3600000,
+      "timeoutMs": 1000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/PWA/assets/css/animate.css": "5241a3eff4600cfd8c636057ee0b1f7d19cf1cbd",
+    "/PWA/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/PWA/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/PWA/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/PWA/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/PWA/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/PWA/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/PWA/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/PWA/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/PWA/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/PWA/index.html": "d4fdf475223016a162e38dfa93bac0955a8b10f7",
+    "/PWA/main.bf83c0913ce4d8fb.js": "14cd28cfea24047665c68986361a79101a794e48",
+    "/PWA/manifest.webmanifest": "35022d8c305c82e4bc9f4c9b612012c42bf49eae",
+    "/PWA/polyfills.95a7b794877f82ac.js": "dd04247627db240cdbbf1c7f7bb105a7f82d5243",
+    "/PWA/runtime.f1992883663f4ac7.js": "36fbf95666ffd2a67e043dd26d43910a27b477a9",
+    "/PWA/styles.7f4d6643c89fa703.css": "865cab55199e7a7ef23bcae17519710ca2ec25a6"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
